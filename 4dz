@@ -1,0 +1,204 @@
+import random
+# # #1 task
+# numb = 10
+# while numb >= 0:
+#     print("n =", numb)
+#     numb -= 1
+#
+# # #2 task
+# posl = [1, 2, 3, 4, 5]
+# i = 0
+# summ = 0
+# while i < len(posl):
+#     summ += posl[i]
+#     i += 1
+# print("Summary is ", summ)
+#
+# # #3 task
+# step = 5
+# numb = 10
+# new_numb = 1
+# i = 1
+# while i <= step:
+#     new_numb *= numb
+#     i += 1
+# print(numb, "^", step, "=", new_numb)
+#
+# #4 task
+# summ = 0
+# i = 1
+# while i <= 20:
+#     summ += i
+#     i += 2
+# print("Summary is", summ)
+from random import random
+
+#5 task
+# summ = 0
+# n = int(input("Enter a number: "))
+# i = 0
+# while i <= n:
+#     summ += i
+#     i += 2
+# print("Summary is", summ)
+
+
+# 6 task
+# a = int(input("Enter 1st number: "))
+# b = int(input("Enter 2nd number: "))
+# if a < b:
+#     i = a
+#     while i <= b:
+#         if i % 2 == 1:
+#             print(i)
+#             i += 1
+#         else:
+#             i += 1
+# elif b < a:
+#     i = b
+#     while i <= a:
+#         if i % 2 == 1:
+#             print(i)
+#             i += 1
+#         else:
+#             i += 1
+# else:
+#     print("Your numbers are same")
+
+#7 task
+# n = 4
+# i = 1
+# fact = 1
+# while i <= n:
+#     fact *= i
+#     i += 1
+# print("Factorial of", n, "=", fact)
+
+#8 task
+# length = int(input("Enter a length: "))
+# print("*"*length)
+
+#9 task
+# while 1:
+#     a = int(input("Enter 1st number: "))
+#     b = int(input("Enter 2nd number: "))
+#     print("a + b =", a + b)
+#     print("If you want to close the program, press Y or y.")
+#     answer = input("Your answer: ")
+#     try:
+#         if answer == 'Y' or answer == 'y':
+#             break
+#     except:
+#         continue
+
+#10 task
+# i = 100
+# while i <= 999:
+#     if i % 11 == 0:
+#         print(i)
+#     i += 1
+
+#11 task
+# while 1:
+#     diapason = list()
+#     a = int(input("Enter first number of diapason: "))
+#     b = int(input("Enter second number of diapason: "))
+#     numb = int(input("Number you want to find: "))
+#     if b <= a:
+#         c = a
+#         a = b
+#         b = c
+#
+#     i = a
+#     while i <= b:
+#         diapason.append(str(i))
+#         i += 1
+#
+#     if b >= numb >= a:
+#         i = 0
+#         diapason[numb - a] = "!" + diapason[numb - a] + "!"
+#         print(diapason)
+#         break
+#     else:
+#         print("Ypur number is not in this diapason. Try again")
+#         continue
+
+#12 task
+# from random import randint
+# comp_numb = randint(1, 500)
+# count = 0
+# print("If you want to break the game, press 0")
+# while 1:
+#     numb = int(input("Your number(1 to 500): "))
+#     if numb == 0:
+#         break
+#     else:
+#         if numb < comp_numb:
+#             print("You number < computer number")
+#         elif numb > comp_numb:
+#             print("Your number > computer number")
+#         else:
+#             print("Congratulations! You won this game in", count, "rounds!")
+#             break
+#         count += 1
+
+#13 task
+# width = int(input("Width: "))
+# height = int(input("Height: "))
+# i = 1
+# while i <= height:
+#     print("*" * width)
+#     i += 1
+
+#14 task
+# while 1:
+#     value = float(input("Enter the value (rubles): "))
+#     print("Currency: \n1. Euros \n2. Pounds \n3. Dollars \n press 0 to exit")
+#     answer = int(input("Your answer: "))
+#     if answer == 1:
+#         print(value, "rubles = ", value * 0.010596, "euros")
+#     elif answer == 2:
+#         print(value, "rubles = ", value * 0.008951, "pounds")
+#     elif answer == 3:
+#         print(value, "rubles = ", value * 0.011554, "dollars")
+#     elif answer == 0:
+#         break
+#     else:
+#         print("Your answer doesnt match")
+
+#15 task
+# n = int(input("Number: "))
+# fib = [1, 1]
+# i = 2
+# while i < 100:
+#     fib.append(fib[i - 2] + fib [i - 1])
+#     i += 1
+# print(fib)
+# print("Your number is", fib[n - 1])
+
+#16 task
+while 1:
+    n = str(input("Your number: "))
+    print("1. Find amount of digits \n2. Find summary of all digits \n3. Find amount of 0 \npress 0 to exit")
+    answer = int(input("Your answer: "))
+    if answer == 1:
+        print("Amount of digits: ", len(n))
+    elif answer == 2:
+        summ = 0
+        i = 0
+        while i < len(n):
+            summ += int(n[i])
+            i += 1
+        print("Summary of all digits: ", summ)
+    elif answer == 3:
+        count = 0
+        i = 0
+        while i < len(n):
+            if int(n[i]) == 0:
+                count += 1
+            i += 1
+        print("Amount of 0: ", count)
+    elif answer == 0:
+        break
+    else:
+        print("Your answer doesnt match")
